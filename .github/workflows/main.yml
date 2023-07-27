@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     # checkout action
     steps:
-      - name: "checkout the reposiory"
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script # shell script
+        run: lsb_release -a
