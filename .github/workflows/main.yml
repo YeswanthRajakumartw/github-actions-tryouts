@@ -23,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deployment
-        uses: sws2apps/render-deployment@main #consider using pin for dependabot auto update
+        uses: sws2apps/render-deployment@main 
         with:
-          serviceId: "github-actions-tryouts"
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
           apiKey: ${{ secrets.RENDER_PLATFORM_API }}
-          multipleDeployment: false #optional, default true
+          multipleDeployment: false
