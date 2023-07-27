@@ -19,11 +19,12 @@ jobs:
         run: npm test
 
   deploy:
+    needs: [build]
     name: Deploy to Render
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deployment
-        uses: sws2apps/render-deployment@main 
+        uses: sws2apps/render-deployment@main
         with:
           serviceId: ${{ secrets.RENDER_SERVICE_ID }}
           apiKey: ${{ secrets.RENDER_PLATFORM_API }}
