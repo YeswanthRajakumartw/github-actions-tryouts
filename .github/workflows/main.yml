@@ -1,0 +1,9 @@
+name: First Worflow
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # checkout action
+    steps:
+      - name: "checkout the reposiory"
+        uses: actions/checkout@v2
