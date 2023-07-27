@@ -1,0 +1,8 @@
+name: "python linting"
+on: push
+jobs:
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Super-Linter
+        uses: super-linter/super-linter@v5.2.0
